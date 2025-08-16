@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - ZAIN X CHEAT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-icons">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Store
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="brand-name">
+                <span class="fire-icon">⭐</span>
+                Customer Reviews
+                <span class="fire-icon">⭐</span>
+            </h1>
+            <p class="tagline">Real feedback from our valued customers</p>
+        </div>
+    </section>
+
+    <!-- Review Submission Form -->
+    <section class="review-form-section">
+        <h2>Share Your Experience</h2>
+        <form id="reviewForm" class="review-form">
+            <div class="form-group">
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" required placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="customerEmail">Email (for verification)</label>
+                <input type="email" id="customerEmail" required placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label>Rating</label>
+                <div class="star-rating-input">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <input type="hidden" id="ratingValue" value="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="reviewText">Your Review</label>
+                <textarea id="reviewText" rows="4" required placeholder="Share your experience with our sensitivity settings..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="deviceUsed">Device Used</label>
+                <select id="deviceUsed" required>
+                    <option value="">Select your device</option>
+                    <option value="POCO X3">POCO X3</option>
+                    <option value="Samsung A12">Samsung A12</option>
+                    <option value="Redmi Note 10">Redmi Note 10</option>
+                    <option value="Realme 8">Realme 8</option>
+                    <option value="iPhone 12">iPhone 12</option>
+                    <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+                    <option value="iPhone 14">iPhone 14</option>
+                    <option value="iPhone 15">iPhone 15</option>
+                    <option value="Realme Narzo 30/50">Realme Narzo 30/50</option>
+                    <option value="Infinix Hot">Infinix Hot Series</option>
+                    <option value="Tecno Spark">Tecno Spark Series</option>
+                    <option value="Vivo Y Series">Vivo Y Series</option>
+                    <option value="Oppo A Series">Oppo A Series</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+    </section>
+
+    <!-- Reviews Display Section -->
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-stats">
+            <div class="stat-card">
+                <h3 id="totalReviews">0</h3>
+                <p>Total Reviews</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="averageRating">0.0</h3>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="satisfactionRate">100%</h3>
+                <p>Satisfaction Rate</p>
+            </div>
+        </div>
+
+        <div class="reviews-filter">
+            <label for="filterDevice">Filter by Device:</label>
+            <select id="filterDevice">
+                <option value="all">All Devices</option>
+                <option value="POCO X3">POCO X3</option>
+                <option value="Samsung A12">Samsung A12</option>
+                <option value="Redmi Note 10">Redmi Note 10</option>
+                <option value="Realme 8">Realme 8</option>
+                <option value="iPhone 12">iPhone 12</option>
+                <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+                <option value="iPhone 14">iPhone 14</option>
+                <option value="iPhone 15">iPhone 15</option>
+                <option value="Realme Narzo 30/50">Realme Narzo 30/50</option>
+                <option value="Infinix Hot">Infinix Hot Series</option>
+                <option value="Tecno Spark">Tecno Spark Series</option>
+                <option value="Vivo Y Series">Vivo Y Series</option>
+                <option value="Oppo A Series">Oppo A Series</option>
+            </select>
+        </div>
+
+        <div id="reviewsContainer" class="reviews-container">
+            <!-- Reviews will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 ZAIN X CHEAT • All rights reserved</p>
+        <div class="footer-links">
+            <a href="index.html">Back to Store</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script src="reviews.js"></script>
+</body>
+</html>
